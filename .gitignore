@@ -1,0 +1,8 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/MarsExploration/.vs/MarsExploration
+/MarsExploration/obj/Debug/net8.0
+/MarsExploration/obj
