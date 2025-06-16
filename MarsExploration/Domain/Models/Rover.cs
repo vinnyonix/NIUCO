@@ -55,5 +55,4 @@ namespace MarsExploration.Domain.Models
             };
         }
     }
-
 }
