@@ -139,6 +139,23 @@ Exemplo de configuração no workflow:
 
 Isso garante que a solução esteja sempre funcional e testada a cada alteração publicada.
 
+## 🤖 Assistente de IA Utilizado
+
+Durante o desenvolvimento desta solução, utilizei a IA da OpenAI — especificamente o modelo ChatGPT (GPT-4o) — como apoio técnico para:
+
+   - Explorar padrões de design como Command Pattern.
+   - Escrever testes unitários com xUnit.
+   - Analisar fluxos de movimento das sondas com ajuda de representações visuais (matriz).
+   - Criar trechos explicativos de código, README e documentação.
+   - Discutir abordagens para evitar colisão de sondas no planalto.
+
+O uso da IA foi feito como uma extensão da minha análise, e não como substituto. As decisões finais de design e implementação foram tomadas com base no entendimento do problema e nos requisitos descritos.
+
+💡 Vantagens observadas:
+   - Agilidade para estruturar código limpo e testável.
+   - Ganho de tempo com geração automatizada de boilerplate para testes.
+   - Sugestões úteis de organização do projeto, fluxo e responsabilidades.
+
 ## ✅ Considerações Finais
 
 O uso do padrão **Command** e de uma **Factory isolada** se mostrou ideal para lidar com instruções dinâmicas e encadeadas.
