@@ -15,7 +15,14 @@
 
         public bool IsInside(Position pos) => pos.X >= 0 && pos.X <= Width && pos.Y >= 0 && pos.Y <= Height;
         public bool IsOccupied(Position pos) => _occupiedPositions.Contains($"{pos.X},{pos.Y}");
-        public void Occupy(Position pos) => _occupiedPositions.Add($"{pos.X},{pos.Y}");
         public void Vacate(Position pos) => _occupiedPositions.Remove($"{pos.X},{pos.Y}");
+
+        public void Occupy(Position pos)
+        {
+            if (IsOccupied(pos))
+                throw new InvalidOperationException($"A posição {pos.X},{pos.Y} já está ocupada por outra sonda.");
+
+            _occupiedPositions.Add($"{pos.X},{pos.Y}");
+        }
     }
 }

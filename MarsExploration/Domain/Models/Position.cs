@@ -10,7 +10,5 @@
             X = x;
             Y = y;
         }
-
-        public Position Clone() => new Position(X, Y);
     }
 }
