@@ -114,6 +114,31 @@ Cada comando é encapsulado como objeto, mantendo **baixa acoplagem**, **alta co
 
 ---
 
+## 🔄 Integração Contínua
+
+A solução está integrada com **GitHub Actions**. A pipeline é acionada a cada `push` ou `pull request` na branch `main`. Ela realiza os seguintes passos:
+
+1. **Checkout do código**
+2. **Instalação do .NET 8.0**
+3. **Restauração dos pacotes NuGet da solução**
+4. **Build da solução com configuração `Release`**
+5. **Execução dos testes com relatório `trx`**
+
+Exemplo de configuração no workflow:
+
+```yaml
+- name: Restaurar pacotes
+  run: dotnet restore ./MarsExploration/MarsExploration.sln
+
+- name: Build do projeto
+  run: dotnet build ./MarsExploration/MarsExploration.sln --no-restore --configuration Release
+
+- name: Executar testes
+  run: dotnet test ./MarsExploration/MarsExploration.sln --no-build --configuration Release --logger "trx"
+```
+
+Isso garante que a solução esteja sempre funcional e testada a cada alteração publicada.
+
 ## ✅ Considerações Finais
 
 O uso do padrão **Command** e de uma **Factory isolada** se mostrou ideal para lidar com instruções dinâmicas e encadeadas.
