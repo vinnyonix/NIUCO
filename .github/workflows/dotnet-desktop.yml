@@ -20,10 +20,10 @@ jobs:
           dotnet-version: '8.0.x'  
 
       - name: Restaurar pacotes
-        run: dotnet restore MarsExploration.sln
+        run: dotnet restore MarsExploration/MarsExploration.sln
 
       - name: Build do projeto
-        run: dotnet build MarsExploration.sln --no-restore --configuration Release
+        run: dotnet build MarsExploration/MarsExploration.sln --no-restore --configuration Release
 
       - name: Executar testes
-        run: dotnet test MarsExploration.sln --no-build --configuration Release --logger "trx"
+        run: dotnet test MarsExploration/MarsExploration.sln --no-build --configuration Release --logger "trx"
