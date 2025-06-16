@@ -1,6 +1,5 @@
-﻿using MarsExploration.Domain.Enums;
-using MarsExploration.Domain.Factories;
-using System.Windows.Input;
+﻿using MarsExploration.Domain.Factories;
+using MarsExploration.Domain.Enums;
 
 namespace MarsExploration.Domain.Models
 {
